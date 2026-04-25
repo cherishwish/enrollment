@@ -1,3 +1,22 @@
 spring:
   application:
     name: enrollment
+  datasource:
+    url: jdbc:h2:mem:enrollment
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
